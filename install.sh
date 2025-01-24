@@ -2,6 +2,6 @@
 
 set -x
 
-podman-compose down
 podman-compose pull
+podman-compose down
 podman-compose up -d
