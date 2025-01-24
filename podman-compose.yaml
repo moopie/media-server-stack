@@ -10,7 +10,7 @@ services:
     ports:
       - 32400:32400
     volumes:
-      - ./plex-data:/config
+      - ./data/plex:/config
       - ./media:/data
     networks:
       - media
@@ -23,7 +23,7 @@ services:
       - TZ=Asia/Jerusalem
       - WEBUI_PORT=9091
     volumes:
-      - ./qbittorrent-data:/config
+      - ./data/qbittorrent:/config
       - ./downloads:/downloads
     ports:
       - 9091:9091
@@ -41,7 +41,7 @@ services:
     ports:
       - 8989:8989
     volumes:
-      - ./sonarr-data:/config
+      - ./data/sonarr:/config
       - ./downloads:/downloads
       - ./media/tv:/tv
     networks:
@@ -56,7 +56,7 @@ services:
     ports:
       - 7878:7878
     volumes:
-      - ./radarr-data:/config
+      - ./data/radarr:/config
       - ./downloads:/downloads
       - ./media/movies:/movies
     networks:
@@ -69,7 +69,7 @@ services:
       - PGID=985
       - TZ=Asia/Jerusalem
     volumes:
-      - ./overseerr-data:/config
+      - ./data/overseerr:/config
     ports:
       - 5055:5055
     networks:
@@ -82,7 +82,7 @@ services:
       - PGID=985
       - TZ=Asia/Jerusalem
     volumes:
-      - ./prowlarr-data:/config
+      - ./data/prowlarr:/config
     ports:
       - 9696:9696
     networks:
